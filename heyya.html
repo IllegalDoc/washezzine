@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heey there</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+        color: #333;
+      }
+
+      .card {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        text-align: center;
+        width: 300px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #ff6f61;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          background-color 0.2s;
+      }
+
+      .button-yes {
+        background-color: #68d391;
+        color: white;
+      }
+
+      .button-yes:hover {
+        background-color: #48bb78;
+        transform: scale(1.1);
+      }
+
+      .button-no {
+        background-color: #fc8181;
+        color: white;
+      }
+
+      .button-no:hover {
+        background-color: #f56565;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Hey there</h1>
+      <p>
+        Mario is it? i don't know what's your name yet but you a cutie and i
+        wanna night ride with you baby.
+      </p>
+      <div class="button-container">
+        <button
+          class="button button-yes"
+          onclick="alert('Allright , Next week babygirl ?')"
+        >
+          Yes
+        </button>
+        <button class="button button-no" onclick="toggleNoButton(this)">
+          No
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function toggleNoButton(button) {
+        button.classList.remove("button-no");
+        button.classList.add("button-yes");
+        button.textContent = "Yes";
+        button.onclick = function () {
+          alert("Lovely! Date night week?");
+        };
+      }
+    </script>
+  </body>
+</html>
